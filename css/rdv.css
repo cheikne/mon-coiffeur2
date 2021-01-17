@@ -1,0 +1,56 @@
+
+.container{
+    
+   padding: 50px;
+   /*background-color:gray;*/
+   background: rgba(0,0,0,0.5);
+   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+   color: #c5ecfd;
+   background-size: 100px 100px;
+   /*border-radius: 30px;*/
+}
+.checkbox-inline{
+    font-size: 18px;
+    font-family: courrier;
+    font-weight: bold;
+}
+.form-check-inline{
+    margin-left: 40px;
+}
+#date{
+    background-color: white;
+    color:black;
+}
+#heure{
+    background-color: white;
+    color:black;
+/*    margin-left: 400px;*/
+}
+#service div{
+    margin: 10px;       
+}
+#jan{
+    font-size: 50px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+h2,h1{
+    font-size: 1em;
+    font-family: courrier;
+    font-weight: bold;
+     animation-duration: 3s;
+  animation-name: slidein;
+  /*animation-iteration-count: infinite;*/
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+

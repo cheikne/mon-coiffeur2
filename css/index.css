@@ -1,0 +1,118 @@
+main{
+            width: 80%;
+            margin:auto;
+        }
+        .diapo{
+            position: relative;
+            overflow: hidden;
+        }
+        #nav-droite{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 3em;
+            right: 10%;
+        }
+        #nav-gauche{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 3em;
+            left: 20px;
+        }
+        .elements{
+            display: flex;
+            transition: 1s linear;
+        }
+        .element{
+            flex: 1 0 100%;
+            position: relative;
+        }
+        .element > img{
+            width: 100%;
+        }
+        .caption{
+            position: absolute;
+            top: 82%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            background-color: rgba(255,255,255,0.4);
+            padding: 30px;
+        }
+
+ /*.myimages {
+     display: flex;
+     overflow: hidden;
+     height: 50vw;
+     background: #333;
+     width:80%;
+     height: 450px;
+     margin-left: 10%;
+     border:2px solid black;
+     border-radius: 10px;
+
+ }
+
+ .myimages img {
+     max-width: 100%;
+     vertical-align: middle;
+     border: 2px solid white;
+     box-sizing: border-box;
+     transition: opacity .2s
+ }
+
+ .myimages:hover img {
+     opacity: 0.5
+ }
+
+ .myimages img:hover {
+     opacity: 1
+ }
+
+ .first-column {
+     animation: var(--animation, none) 16s infinite linear
+ }
+
+ .first-column:hover {
+     animation-play-state: paused
+ }
+
+ .first-column:nth-of-type(odd) {
+     align-self: flex-end;
+     --direction: 50%
+ }
+
+ @keyframes slide {
+     to {
+         -webkit-transform: translateY(var(--direction, -50%));
+         transform: translateY(var(--direction, -50%))
+     }
+ }
+
+
+
+/************************************************/
+.navbar-brand{
+    font-size: 60px;
+}
+#jan{
+    font-size: 50px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+li a {
+    font-size: 15px;
+}
+.header{  
+  position: absolute;
+  left: 20%;
+}
+
+.imageBackground{
+    width: 100px;
+    height: 100px;
+    display: block;
+}
