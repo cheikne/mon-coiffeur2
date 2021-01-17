@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete un rendez-vous</title>
+	    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<style type="text/css">
+	#demo{
+		font-family: sans-serif;
+		font-size: 1em;
+		font-weight: bold;
+		background-color: gray;
+		margin: 8px;
+		margin-top: 30px;
+		padding: 10px;
+		text-indent: 5px;
+		width: 100%;
+		display: none;
+
+	}
+	.CodeConfi{
+		display: none;		
+	}
+	.container{
+	    
+	    padding: 50px;
+	    background: rgba(2,1,2,0.5);
+  		box-shadow: 0 0 10px rgba(0,0,0,0.3);
+ 		color: #c5ecfd;
+  		background-size: 100px 100px;
+	}
+	.action{
+		text-align: center;
+	}
+</style>
+<body onload="Loadpage()">
+	<div id="menu"></div>
+	<div class="container" id="mainContainer" style="margin-top: 40px;">
+		<form>
+		    <label class="">Entrer votre email :</label><br>
+            <div class="input-group">
+                <input id="email_modify" type="text" class="form-control" name="email" placeholder="Email" required>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            </div><br>
+            <button type="button" id="valider" class="btn btn-info btn-lg"  onclick="ValidationEmail()">Valider</button><br>
+            <div class="CodeConfi" id="CodeConfidentiel">
+            	<label >Entrer le Code Confidentiel :</label>
+                <input id="email_modify_code" type="text" class="form-control" placeholder="Entrer code" ><br>
+                 <button type="button" class="btn btn-info btn-lg"  onclick="displayInfoClient()">Confirmer</button>
+            </div><br>
+	    </form>
+	</div>
+	 <button id="modal_error" style="display:none;" data-toggle="modal" data-target="#myModal">button</button>
+      <div class="modal fade" id="myModal" role="dialog" > </div>
+	<div id="demo" style="padding: 40px;"></div>
+	<div id="askConfirmation"></div>
+	<script type="text/javascript" src="javascript/modifie.js"></script>
+	<script type="text/javascript" src="javascript/rdv.js"></script>
+	<script type="text/javascript" src="javascript/AllModal.js"></script>
+</body>
+</html>

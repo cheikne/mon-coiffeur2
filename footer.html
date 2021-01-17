@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/index.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://kit.fontawesome.com/9f03.js"></script>
+      <link rel= "stylesheet" href= "https //use.fontawesome.com/releases/v5.8.1/css/all.css">
+<style type="text/css">
+  @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+  .contact{
+    font-family: Times New Roman,Times,serif;
+  }
+  .linkc a{
+    color: white;
+    text-decoration:none;
+    font-family: Times New Roman,Times,serif;
+    transition: 0.5 ease;
+  }
+  .linkc a:hover{
+    color: #fcba03;
+  }
+  .social-media ul{
+    display: inline-block;
+  }
+  .social-media ul li{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .social-media ul li a{
+    font-size: 20px;
+    color: white;
+    letter-spacing: 0.1em;
+    -moz-transform: all 0.5 ease-in-out 0s;
+    -webkit-transform: all 0.5 ease-in-out 0s;
+    -ms-transform: all 0.5 ease-in-out 0s;
+    -o-transform: all 0.5 ease-in-out 0s;
+    transition: all 0.5 ease-in-out 0s;
+  }
+  .social-media ul li a:hover{
+    color: #fcba03
+  }
+  input[type=email]{
+    height: 32px;
+    border-radius: 3px;
+    width: 180px;
+    float: left;
+  }
+  input[type=email]::placeholder{
+    color: #999;
+  }
+  button{
+    transition: all 0.5 ease-in-out;
+  }
+</style>
+</head>
+
+<body>
+  <div style="background-color: #211a30;color: white;">
+    <div class="container" style="width: 100%;">
+      <div class="col-md-3">
+        <h2 style="color: #fcba03;font-family: Times New Roman,Times,serif;">A propos de nous</h2><br>
+        <p class="contact">Rue 22039</p>
+        <p class="contact">Hamdalaye ACI</p>
+        <p class="contact">+23390256771</p>
+        <p class="contact">kane.cheickne@gmail.com</p>
+      </div>
+      <div class="col-md-3">
+        <h2 style="color: #fcba03;font-family: Times New Roman,Times,serif;">Link</h2><br>
+        <p class="linkc"><a href="index.html">Home</a></p>
+        <p class="linkc"><a href="#">Galerry</a></p>
+        <p class="linkc" id="id_about"><a href="#">Contactez nous</a></p>
+        <p class="linkc"><a href="#">A propos de nous</a></p>
+      </div>
+      <div class="col-md-3">
+        <div class="social-media">
+          <h2 style="color: #fcba03;font-family: Times New Roman,Times,serif;">Social media</h2><br>
+          <ul class="list-unstyled">
+            <li><a href="#"> <img src="https://th.bing.com/th/id/OIP.ESoALjqKHhBDa8cyycvZmwHaHa?w=178&h=180&c=7&o=5&pid=1.7" width="60px"></a></li>
+            <li><a href="#"> <img src="https://th.bing.com/th?q=Free+Instagram+Icon&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-XA&adlt=strict&t=1&mw=247" width="60px"> </a></li>
+            <li><a href="#"><img src="https://th.bing.com/th/id/OIP.3pxLpR-nK5phNlY-FsYDKgAAAA?w=141&h=150&c=7&o=5&pid=1.7" width="60px"></a></li>
+            <li><a href="#"> <img src="https://th.bing.com/th?q=Google+Plus+Icon.png+Black+and+White&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-XA&adlt=strict&t=1&mw=247" width="60px"> </a></li>
+            <li><a href="#"> <img src="https://th.bing.com/th?q=Whatsapp+Icon+Transparent&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-XA&adlt=strict&t=1&mw=247" width="60px"> </a></li>
+          </ul>
+          
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <h2 style="color: #fcba03;font-family: Times New Roman,Times,serif;">Subcribe Our New Letter</h2><br>
+        <input type="email" name="Subcribe" placeholder="Entrer votre email" class="form-control" required=""><button class="btn btn-success">Envoyer</button>
+
+      </div>
+    </div><br>
+    <div class="container" style="width: 100%;">
+     <h2 style="text-align: center;font-family: Times New Roman,Times,serif;font-size: 25px">Salon de coiffure ouvert pour tout le monde Homme,Femme|Tous les modeles de coiffure de votre guise</h2><br>
+    </div>
+  </div>
+</body>
+<!--   <script>
+$(document).ready(function(){
+  $("id_about").click(function(){
+    document.getElementById('about_us').style.display="block";
+    $("about_us").toggle();
+  });
+});
+</script> -->
+</html>

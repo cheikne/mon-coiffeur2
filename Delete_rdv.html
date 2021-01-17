@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete un rendez-vous</title>
+	  <link rel="stylesheet" href="css/rdv.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+	<style type="text/css">
+		body{
+			margin:0;
+		}
+		main{
+			width: 80%;
+			margin:auto;
+		}
+		.diapo{
+			position: relative;
+			overflow: hidden;
+		}
+		#nav-droite{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			color: white;
+			font-size: 3em;
+			right: 10%;
+		}
+		#nav-gauche{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			color: white;
+			font-size: 3em;
+			left: 20px;
+		}
+		.elements{
+			display: flex;
+			transition: 1s linear;
+		}
+		.element{
+			flex: 1 0 100%;
+			position: relative;
+		}
+		.element > img{
+			width: 100%;
+		}
+		.caption{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			text-align: center;
+			background-color: rgba(255,255,255,0.4);
+			padding: 30px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1> Diaporama</h1>
+		<div class="diapo">
+			<div class="elements">
+				<div class="element">
+					<img src="image/igm6.png" alt="image 1" width="1100px" height="500px">
+					<div class="caption">
+						<h1>Image 1</h1>
+						<p>Salon de coiffure ouvert pour tout le monde Homme,Femme|Tous les modeles de coiffure de votre guise</p>
+					</div>
+				</div>
+				<div class="element">
+					<img src="image/igm7.png" alt="image 2" width="1100px" height="500px">
+					<div class="caption">
+						<h1>Image 1</h1>
+						<p>Salon de coiffure ouvert pour tout le monde Homme,Femme|Tous les modeles de coiffure de votre guise</p>
+					</div>
+				</div>
+				<div class="element">
+					<img src="image/igm8.png" alt="image 3" width="1100px" height="500px">
+					<div class="caption">
+						<h1>Image 1</h1>
+						<p>Salon de coiffure ouvert pour tout le monde Homme,Femme|Tous les modeles de coiffure de votre guise</p>
+					</div>
+				</div>
+			</div>
+			<i id="nav-gauche" class="fas fa-chevron-left"></i>
+			<i id="nav-droite" class="fas fa-chevron-right"></i>
+		</div>
+	</main>
+	<script type="text/javascript" src="javascript/Delete.js"></script>
+</body>
+<script type="text/javascript">
+	let compteur=0
+	let timer,elements,slide,slideWidth
+	window.onload=()=>{
+		const diapo =document.querySelector(".diapo")
+		 elements=document.querySelector(".elements")
+		 slide = Array.from(elements.children)
+		 slideWidth=diapo.getBoundingClientRect().width
+		 let next = document.querySelector("#nav-droite")
+		 let prev = document.querySelector("#nav-gauche")
+		 next.addEventListener("click",NextImage)
+		 prev.addEventListener("click",PrevImage)
+		 //Gerer le survol de la souris
+		 diapo.addEventListener("mouseover",StopImage)
+		 diapo.addEventListener("mouseout",StartImage)
+		 // Mise en oeuvre de resposive
+		 window.addEventListener("resize",()=>{
+		 	slideWidth=diapo.getBoundingClientRect().width
+		 	NextImage()
+		 })
+	}
+	function NextImage(){
+		compteur++
+		if(compteur==slide.length){
+			compteur=0;
+		}
+		let decal = -slideWidth*compteur
+		elements.style.transform=`translateX(${decal}px)`
+	}
+	function PrevImage(){
+		compteur--
+		if(compteur<0){
+			compteur=slide.length-1;
+		}
+		let decal = -slideWidth*compteur
+		elements.style.transform=`translateX(${decal}px)`
+	}
+	timer =setInterval(NextImage,4000)
+	function StopImage(){
+		clearInterval(timer);
+	}
+	function StartImage(){
+		timer = setInterval(NextImage,4000)
+	}
+</script>
+</html>
